@@ -7,6 +7,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 import { LoadingSpinner } from "./components/LoadingSpinner";
 import { Login } from "./components/Login";
 import { ProtectedRoute } from "./components/ProtectedRoute";
+// import { useAuth } from "./context/AuthContext";
 
 function App() {
   return (
