@@ -127,7 +127,7 @@ const AddTaskModal = ({ isOpen, onClose }) => {
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 ${
-                      darkMode ? "text-gray-600" : "text-gray-800"
+                      darkMode ? "text-white" : "text-gray-800"
                     }`}
                     placeholder="What needs to be done?"
                     required
@@ -146,7 +146,7 @@ const AddTaskModal = ({ isOpen, onClose }) => {
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 ${
-                      darkMode ? "text-gray-600" : "text-gray-800"
+                      darkMode ? "text-white" : "text-gray-800"
                     }`}
                     placeholder="Add details about this task..."
                     rows="3"
@@ -162,16 +162,16 @@ const AddTaskModal = ({ isOpen, onClose }) => {
                       Due Date
                     </label>
                     <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Calendar className="h-4 w-4 text-gray-400" />
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none ">
+                        <Calendar className="h-4 w-4 text-gray-400 " />
                       </div>
                       <input
                         type="date"
                         id="task-due-date"
                         value={dueDate}
                         onChange={(e) => setDueDate(e.target.value)}
-                        className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 ${
-                          darkMode ? "text-gray-600" : "text-gray-800"
+                        className={` w-full px-3 pl-10 py-2 border rounded-lg  focus:outline-none focus:ring-2 focus:ring-emerald-500 ${
+                          darkMode ? "text-white" : "text-gray-800"
                         }`}
                       />
                     </div>
@@ -188,8 +188,10 @@ const AddTaskModal = ({ isOpen, onClose }) => {
                       id="task-priority"
                       value={priority}
                       onChange={(e) => setPriority(e.target.value)}
-                      className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 ${
-                        darkMode ? "text-gray-600" : "text-gray-800"
+                      className={`cursor-pointer w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 ${
+                        darkMode
+                          ? " dark:text-white bg-gray-800"
+                          : "text-gray-800"
                       }`}
                     >
                       <option value="Low">Low</option>
@@ -222,8 +224,8 @@ const AddTaskModal = ({ isOpen, onClose }) => {
                             handleAddTag();
                           }
                         }}
-                        className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 ${
-                          darkMode ? "text-gray-600" : "text-gray-800"
+                        className={`w-full px-3 pl-10 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 ${
+                          darkMode ? "text-white" : "text-gray-800"
                         }`}
                         placeholder="Add a tag..."
                       />
@@ -231,10 +233,10 @@ const AddTaskModal = ({ isOpen, onClose }) => {
                     <button
                       type="button"
                       onClick={handleAddTag}
-                      className="ml-2 p-2 rounded-lg bg-emerald-500 text-white hover:bg-emerald-600 transition-colors"
+                      className="ml-2 p-2 cursor-pointer rounded-lg bg-emerald-500 text-white hover:bg-emerald-600 transition-colors"
                       aria-label="Add tag"
                     >
-                      <Plus className="w-5 h-5" />
+                      <Plus className="w-5 h-5 " />
                     </button>
                   </div>
 
@@ -250,7 +252,7 @@ const AddTaskModal = ({ isOpen, onClose }) => {
                             key={tag}
                             type="button"
                             onClick={() => handleSelectExistingTag(tag)}
-                            className={`text-xs px-2 py-1 rounded-full ${
+                            className={`text-xs px-2 py-1 rounded-full  ${
                               tags.includes(tag)
                                 ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200"
                                 : "bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600"
@@ -275,10 +277,10 @@ const AddTaskModal = ({ isOpen, onClose }) => {
                           <button
                             type="button"
                             onClick={() => handleRemoveTag(tag)}
-                            className="ml-1 p-0.5 rounded-full hover:bg-emerald-200 dark:hover:bg-emerald-800"
+                            className="ml-1 p-0.5 rounded-full hover:bg-emerald-200 dark:hover:bg-emerald-800 cursor-pointer"
                             aria-label={`Remove ${tag} tag`}
                           >
-                            <X className="w-3 h-3" />
+                            <X className="w-3 h-3 " />
                           </button>
                         </div>
                       ))}
