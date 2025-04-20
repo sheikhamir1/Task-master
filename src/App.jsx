@@ -10,8 +10,6 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 // import { useAuth } from "./context/AuthContext";
 
 function App() {
-  console.log("API KEY:", import.meta.env.VITE_FIREBASE_API_KEY);
-
   return (
     <ThemeProvider>
       <AuthProvider>
