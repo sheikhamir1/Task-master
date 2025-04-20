@@ -8,7 +8,7 @@ import { LoadingSpinner } from "./components/LoadingSpinner";
 import { Login } from "./components/Login";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 
-// the app is working fine
+// firebase stu[p as done
 
 function App() {
   return (
