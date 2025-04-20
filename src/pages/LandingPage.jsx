@@ -12,6 +12,9 @@ import {
   Database,
   Moon,
   Sun,
+  Phone,
+  CheckCircle2,
+  Trash2,
 } from "lucide-react";
 
 const CustomDragDropIcon = (props) => (
@@ -66,8 +69,46 @@ const LandingPage = () => {
     },
     {
       icon: <Database className="w-10 h-10 text-red-500" />,
-      title: "Store in Browser",
-      description: "Your tasks are saved locally - no login required",
+      title: "Store in Database Securely",
+      description: "Your tasks are saved in a secure database",
+    },
+    {
+      icon: <Sun className="w-10 h-10 text-yellow-500" />,
+      title: "Light and Dark Modes",
+      description: "Choose your preferred theme for a personalized experience",
+    },
+    {
+      icon: <Moon className="w-10 h-10 text-gray-500" />,
+      title: "Dark Mode",
+      description: "Switch to the dark mode for a more immersive experience",
+    },
+    {
+      icon: <Database className="w-10 h-10 text-indigo-500" />,
+      title: "Real-Time Updates",
+      description: "Tasks sync instantly across your devices using Firebase",
+    },
+    {
+      icon: <CheckCircle className="w-10 h-10 text-pink-500" />,
+      title: "Secure Login",
+      description:
+        "Sign in with Google to access your personalized task dashboard",
+    },
+    {
+      icon: <Phone className="w-10 h-10 text-cyan-500" />,
+      title: "Mobile Friendly",
+      description: "Access and manage your tasks from any device, anywhere",
+    },
+    {
+      icon: <CheckCircle2 className="w-10 h-10 text-green-600" />,
+      title: "Mark as Complete",
+      description:
+        "Quickly mark tasks as done and stay on top of your progress",
+    },
+    {
+      icon: <Trash2 className="w-10 h-10 text-rose-500" />,
+      title: "Trash & Restore",
+      description:
+        "Accidentally deleted a task? Restore it anytime from the trash",
     },
   ];
 
